@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="adminsearch_config" class="MeetMagentoPL\AdminSearch\Model\Indexer\Config\Action\Full">
+        <title translate="true">Configuration</title>
+        <description translate="true">Magento configuration.</description>
+    </indexer>
+    <indexer id="adminsearch_menu" class="MeetMagentoPL\AdminSearch\Model\Indexer\Menu\Action\Full">
+        <title translate="true">Menu</title>
+        <description translate="true">Admin menu items.</description>
+    </indexer>
+</config>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Controller\Adminhtml\Index\GlobalSearch">
+        <arguments>
+            <argument name="searchModules" xsi:type="array">
+                <item name="adminsearch" xsi:type="array">
+                    <item name="class" xsi:type="string">MeetMagentoPL\AdminSearch\Model\Search</item>
+                    <item name="acl" xsi:type="string">MeetMagentoPL_AdminSearch::index</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="MeetMagentoPL\AdminSearch\Model\Config\Data">
+        <arguments>
+            <argument name="stateCollection" xsi:type="object" shared="false">MeetMagentoPL\AdminSearch\Model\ResourceModel\Indexer\State\Collection</argument>
+        </arguments>
+    </type>
+    <preference for="MeetMagentoPL\AdminSearch\Model\Index\Config\ItemInterface" type="MeetMagentoPL\AdminSearch\Model\Index\Config\Item"/>
+    <preference for="MeetMagentoPL\AdminSearch\Model\Index\Menu\ItemInterface" type="MeetMagentoPL\AdminSearch\Model\Index\Menu\Item"/>
+    <preference for="MeetMagentoPL\AdminSearch\Model\IndexerInterface" type="MeetMagentoPL\AdminSearch\Model\Indexer"/>
+    <preference for="MeetMagentoPL\AdminSearch\Model\IndexHandlerInterface" type="MeetMagentoPL\AdminSearch\Model\IndexHandler"/>
+    <preference for="MeetMagentoPL\AdminSearch\Model\IndexStructureInterface" type="MeetMagentoPL\AdminSearch\Model\IndexStructure"/>
+</config>
